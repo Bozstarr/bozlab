@@ -80,3 +80,15 @@ http://127.0.0.1:8000/docs
 `GET /devices`
 
 Returns devices stored in PostgreSQL, ordered by ID.
+
+`POST /devices`
+
+Creates a device. The name must contain 1–100 characters.
+
+Example request body:
+
+```json
+{"name": "office-sensor"}
+```
+
+Returns `201 Created` with the created device, or `422` if request validation fails.
