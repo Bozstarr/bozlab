@@ -15,11 +15,6 @@ def health():
     return {"status": "ok"}
 
 
-@app.get("/health")
-def health():
-    return {"status": "ok"}
-
-
 @app.get("/devices")
 def list_devices():
     with psycopg.connect(row_factory=dict_row) as conn:
